@@ -1,0 +1,152 @@
+ID,Query,Intent Label,RAG Domain Label
+1,elmafroud atmrn kam yum f elesboo3,GENERAL_QA,training_guide
+2,as5an ezay abl eltamren?,GENERAL_QA,training_guide
+3,tb ezay a5tar elawzan?,GENERAL_QA,training_guide
+4,ya3ni eh super set?,GENERAL_QA,training_guide
+5,ya3ni eh drop sets?,GENERAL_QA,training_guide
+6,eh elpartial reps da?,GENERAL_QA,training_guide
+7,cardio?,GENERAL_QA,training_guide
+8,arya7 ad eh f elesboo3?,GENERAL_QA,training_guide
+9,ana brya7 youmin f elesboo3 w bardo ta3ban da bsbb eh da,GENERAL_QA,both
+10,akol ad eh protin f elyum?,GENERAL_QA,nutrition_ebook
+11,akol eh mmkn y3ly eltestosterone 3andy?,GENERAL_QA,nutrition_ebook
+12,eh elfar2 maben simple carbs w complex,GENERAL_QA,nutrition_ebook
+13,fe applications tsa3edny a7seb so3raty?,GENERAL_QA,nutrition_ebook
+14,ana hamouuut w akol haga mesakraa,GENERAL_QA,nutrition_ebook
+15,ezayak ya basha,CHIT_CHAT,N/A
+16,ana zah2an mn eltamrin,CHIT_CHAT,N/A
+17,eh el equation bta3et el TDEE?,GENERAL_QA,both
+18,ana zah2an mn eldiet,CHIT_CHAT,N/A
+19,eh el formula bta3et el max heart rate?,GENERAL_QA,training_guide
+20,ezayak ya coach,CHIT_CHAT,N/A
+21,sabah el kher,CHIT_CHAT,N/A
+22,shokran gedan,CHIT_CHAT,N/A
+23,enta meen?,CHIT_CHAT,N/A
+24,bt3raf tetkallem 3araby?,CHIT_CHAT,N/A
+25,hello,CHIT_CHAT,N/A
+26,hi,CHIT_CHAT,N/A
+27,thanks for the help,CHIT_CHAT,N/A
+28,good morning,CHIT_CHAT,N/A
+29,keef el 7al,CHIT_CHAT,N/A
+30,saba7 elkhir,CHIT_CHAT,N/A
+31,great job,CHIT_CHAT,N/A
+32,bye bye,CHIT_CHAT,N/A
+33,teslam eedak,CHIT_CHAT,N/A
+34,3amel eh el naharda?,CHIT_CHAT,N/A
+35,eh afdal wa2t akol fih carbs?,GENERAL_QA,nutrition_ebook
+36,el creatin bywa2a3 el sha3r?,GENERAL_QA,nutrition_ebook
+37,akol eh abl el tamreen?,GENERAL_QA,nutrition_ebook
+38,eh el supplements elly momken a5od-ha?,GENERAL_QA,nutrition_ebook
+39,ezay a7seb el calories bta3ty?,GENERAL_QA,nutrition_ebook
+40,el whey protein darory wala la?,GENERAL_QA,nutrition_ebook
+41,hal el soukar bywa2af el 7ar2?,GENERAL_QA,nutrition_ebook
+42,eh badayel el frakh 3shan zah2t?,GENERAL_QA,nutrition_ebook
+43,el keto diet helw le el takhsis?,GENERAL_QA,nutrition_ebook
+44,ashrab mayya ad eh fel yom?,GENERAL_QA,nutrition_ebook
+45,el kaffeine bya3mel dehydration?,GENERAL_QA,nutrition_ebook
+46,eh afdal masdar protein nabaty?,GENERAL_QA,nutrition_ebook
+47,el intermittent fasting kwayes?,GENERAL_QA,nutrition_ebook
+48,akol eh ba3d el tamreen 3ala tool?,GENERAL_QA,nutrition_ebook
+49,hal el akl bellil bytzawad el wazn?,GENERAL_QA,nutrition_ebook
+50,eh a3rad na2s el vitamin D?,GENERAL_QA,nutrition_ebook
+51,el omega 3 mohem le eh?,GENERAL_QA,nutrition_ebook
+52,ezay a3mel meal prep le el esboo3?,CHIT_CHAT,N/A
+53,eh el akl elly fih fibers keteer?,GENERAL_QA,nutrition_ebook
+54,atmaran kam mara fel esboo3?,GENERAL_QA,training_guide
+55,eh el far2 ben el compound w isolation exercises?,GENERAL_QA,training_guide
+56,el cardio afdal abl wala ba3d el tamreen?,GENERAL_QA,training_guide
+57,eh 3elag el shadd el 3adaly?,GENERAL_QA,both
+58,ezay a3raf eny batmaran bi shakl sa7?,GENERAL_QA,training_guide
+59,eh el rest time ben el sets?,GENERAL_QA,training_guide
+60,hal el tamreen kol yom ghalt?,GENERAL_QA,training_guide
+61,eh a7san schedule le el push pull legs?,GENERAL_QA,training_guide
+62,ezay atganab el esabat?,GENERAL_QA,training_guide
+63,el stretching mohem wala la?,GENERAL_QA,training_guide
+64,atmaran sob7 wala bellil a7san?,GENERAL_QA,training_guide
+65,eh el RPE fel tamreen?,GENERAL_QA,training_guide
+66,ezay a3mel warm up sa7?,GENERAL_QA,training_guide
+67,el dropset mofeed le el dakhama?,GENERAL_QA,training_guide
+68,eh el 7all ma3 el thabat fel wazn?,GENERAL_QA,both
+69,hal el tamreen fel beet zay el gym?,GENERAL_QA,training_guide
+70,ana ba3mel cutting w batmaran kwayes bas mesh bakhes leh?,GENERAL_QA,both
+71,eh afdal barnameg tamreen w ghza2y le el tadkhim?,GENERAL_QA,both
+72,ezay a3mel recomp (abny 3adal w a7ra2 dohon nafs el wa2t)?,GENERAL_QA,both
+73,ana ta3ban gedan fel tamreen momken ykon na2s carbs?,GENERAL_QA,both
+74,ba7es bi dokha w ana batmaran,GENERAL_QA,both
+75,hal el protein powder bysa3ed fel recovery ba3d el tamreen?,GENERAL_QA,both
+76,law batmaran cardio keteer ahtag azawed el carbs?,GENERAL_QA,both
+77,eh el akl elly bysa3ed 3ala el esteshfaa el 3adaly?,GENERAL_QA,both
+78,tell me a joke,CHIT_CHAT,N/A
+79,men emta btetmaran?,CHIT_CHAT,N/A
+80,3ayez a5es bsor3a,GENERAL_QA,both
+81,el gym bta3y mafoosh dummbells a3mel eh?,GENERAL_QA,training_guide
+82,thanks bro,CHIT_CHAT,N/A
+83,hwa 100 gram la7ma abdlhum b ad eh laban?,MATH_SUBSTITUTION,N/A
+84,3ayz abdl ella7ma a5oud ad eh laban,MATH_SUBSTITUTION,N/A
+85,law ma3ish shoufan momken a5od corn flakes badalo ad eh?,MATH_SUBSTITUTION,N/A
+86,badil el ruz eh law 3ayez akol batates w a5od kam gram?,MATH_SUBSTITUTION,N/A
+87,100g ferakh ysaddu makan ad eh samak?,MATH_SUBSTITUTION,N/A
+88,law 3ayez abadel 150g makarona b 3eish akol kam ragheef?,MATH_SUBSTITUTION,N/A
+89,momken a5od ad eh gebna aresh badal 2 bedat?,MATH_SUBSTITUTION,N/A
+90,abdel el zeit b samna ad eh?,MATH_SUBSTITUTION,N/A
+91,lw 3ayez a-replace el tofah b moz akol kam wa7da?,MATH_SUBSTITUTION,N/A
+92,50g loz momken yb2u badalhum sudani ad eh?,MATH_SUBSTITUTION,N/A
+93,el 200g batata fiha carbs zay ad eh ruz?,MATH_SUBSTITUTION,N/A
+94,law ha-swap el frakh b tunah a5od kam gram?,MATH_SUBSTITUTION,N/A
+95,3ayez abadel el zabady b laban rayeb e7sebli el kemya,MATH_SUBSTITUTION,N/A
+96,badil el 50g gebna rumi ykoun ad eh cheddar?,MATH_SUBSTITUTION,N/A
+97,law 3ayez a5od 3asal badal el sokkar a5od kam ma3la2a?,MATH_SUBSTITUTION,N/A
+98,abdel 4 ma3aly zeet b zebda ad eh?,MATH_SUBSTITUTION,N/A
+99,150g turkey ykfi makan ad eh la7ma mafrooma?,MATH_SUBSTITUTION,N/A
+100,law 3andi 7assaseya mn el laban abadlo b ad eh laban goz hend?,MATH_SUBSTITUTION,N/A
+101,law 3ayez abdel el rouz b macaroni a5od ad eh?,MATH_SUBSTITUTION,N/A
+102,hi عامل ايه,CHIT_CHAT,N/A
+103,thanks يا كوتش,CHIT_CHAT,N/A
+104,ممكن joke سريع؟,CHIT_CHAT,N/A
+105,عايز motivation عشان ارجع gym,CHIT_CHAT,N/A
+106,انا دايما بوصل للfailure بدري في chest ايه الحل؟,GENERAL_QA,training_guide
+107,best warm-up للshoulder قبل bench؟,GENERAL_QA,training_guide
+108,RPE يعني ايه وازاي اطبقه؟,GENERAL_QA,training_guide
+109,انا بعمل cardio كتير وبتعب في leg day اعمل ايه؟,GENERAL_QA,both
+110,عايز ابدل 50g رز ب مكرونة,MATH_SUBSTITUTION,N/A
+111,بدل 100g chicken ب tuna قد ايه؟,MATH_SUBSTITUTION,N/A
+112,عايز swap 2 eggs بدل scoop whey ينفع؟,MATH_SUBSTITUTION,N/A
+113,بدل 200ml milk ب yogurt قد ايه؟,MATH_SUBSTITUTION,N/A
+114,عايز ابدل 30g nuts ب peanut butter قد ايه؟,MATH_SUBSTITUTION,N/A
+115,بدل 60g pasta ب bread كام slice؟,MATH_SUBSTITUTION,N/A
+116,انا عايز cut: calories قليلة بس performance واقع اعمل ايه؟,GENERAL_QA,both
+117,ايه احسن high protein breakfast سريع؟,GENERAL_QA,nutrition_ebook
+118,creatine mono ولا HCL؟,GENERAL_QA,nutrition_ebook
+119,انا بجوع late night وبلخبط الدايت any tips؟,GENERAL_QA,nutrition_ebook
+120,عايز bulk plan + workout split 4 days,GENERAL_QA,both
+121,محتاج meal prep ideas عشان شغلي طويل,GENERAL_QA,nutrition_ebook
+122,good evening يا كابتن,CHIT_CHAT,N/A
+123,see you later يا بطل,CHIT_CHAT,N/A
+124,عاش يا beast,CHIT_CHAT,N/A
+125,sorry على الازعاج,CHIT_CHAT,N/A
+126,nice work عاش,CHIT_CHAT,N/A
+127,عايز ابدل 1 cup oats ب شوفان سريع التحضير,MATH_SUBSTITUTION,N/A
+128,لو معايا 200g greek yogurt فيهم كام protein؟,MATH_SUBSTITUTION,N/A
+129,convert 100g raw rice ل مستوي,MATH_SUBSTITUTION,N/A
+130,بدل 1 tbsp olive oil ب avocado قد ايه؟,MATH_SUBSTITUTION,N/A
+131,عايز swap 150g potato ب sweet potato,MATH_SUBSTITUTION,N/A
+132,لو هاكل 3 whole eggs اشيل قد ايه fat من الوجبة؟,MATH_SUBSTITUTION,N/A
+133,احسبلي ال macros في 100g cottage cheese,MATH_SUBSTITUTION,N/A
+134,بدل 4 slices toast ب rice cakes كام واحدة؟,MATH_SUBSTITUTION,N/A
+135,عايز replace 100g beef ب chicken breast,MATH_SUBSTITUTION,N/A
+136,ال 1 scoop casein فيه كام slow digest protein؟,MATH_SUBSTITUTION,N/A
+137,ايه ال difference بين low bar و high bar squat؟,GENERAL_QA,training_guide
+138,هو ال spot reduction حقيقي ولا myth؟,GENERAL_QA,nutrition_ebook
+139,احسن supplements لل joint health ايه؟,GENERAL_QA,nutrition_ebook
+140,انا skinny fat وعايز ابدأ gym اعمل bulk ولا cut؟,GENERAL_QA,both
+141,ال progressive overload معناه ازود وزن بس؟,GENERAL_QA,training_guide
+142,ازاي احسب ال one rep max (1RM) بتاعي؟,GENERAL_QA,training_guide
+143,ايه احسن sources لل complex carbs غير الرز؟,GENERAL_QA,nutrition_ebook
+144,عندي lower back pain في ال deadlift ايه الغلط؟,GENERAL_QA,training_guide
+145,ال deload week اعمله كل قد ايه؟,GENERAL_QA,training_guide
+146,هل ال keto diet ينفع مع high intensity training؟,GENERAL_QA,both
+147,ال sugar free drinks بتكسر ال fasting؟,GENERAL_QA,nutrition_ebook
+148,عايز full body workout للمبتدئين,GENERAL_QA,training_guide
+149,ايه ال side effects لل fat burners؟,GENERAL_QA,nutrition_ebook
+150,انا hitting plateau بقالي شهر اغير ال split؟,GENERAL_QA,both
+151,ال sleep quality بتأثر على ال recovery ازاي؟,GENERAL_QA,both

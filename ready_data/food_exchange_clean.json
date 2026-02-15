@@ -1,0 +1,1022 @@
+[
+  {
+    "category_ar": "بروتين",
+    "category_en": "Protein",
+    "note": "بدون دهن او جلد والميزان بعد الطهي",
+    "items": [
+      {
+        "item_ar": "بياض بيض",
+        "item_en": "Egg Whites",
+        "weight_g": 300,
+        "substitutes": [],
+        "aliases": [
+          "بياض",
+          "egg whites"
+        ]
+      },
+      {
+        "item_ar": "جبن قريش",
+        "item_en": "Cottage Cheese",
+        "weight_g": 200,
+        "substitutes": [],
+        "aliases": [
+          "cottage cheese",
+          "quraish cheese",
+          "kareesh",
+          "جبنة قريش"
+        ]
+      },
+      {
+        "item_ar": "سمك سالمون",
+        "item_en": "Salmon Fish",
+        "weight_g": 120,
+        "substitutes": [],
+        "aliases": [
+          "salmon",
+          "سلمون",
+          "salamon"
+        ]
+      },
+      {
+        "item_ar": "سمك مكرونه",
+        "item_en": "Mackerel Fish",
+        "weight_g": 120,
+        "substitutes": [],
+        "aliases": [
+          "ماكريل",
+          "macaroni",
+          "مكرونة",
+          "spaghetti",
+          "mackerel",
+          "makarona",
+          "pasta"
+        ]
+      },
+      {
+        "item_ar": "سمك بلطي",
+        "item_en": "Tilapia Fish",
+        "weight_g": 120,
+        "substitutes": [],
+        "aliases": [
+          "بلطي",
+          "tilapia"
+        ]
+      },
+      {
+        "item_ar": "سمك سردين",
+        "item_en": "Sardine Fish",
+        "weight_g": 120,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "سمك بوري",
+        "item_en": "Mullet Fish",
+        "weight_g": 120,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "سمك فيليه",
+        "item_en": "Fillet Fish",
+        "weight_g": 120,
+        "substitutes": [],
+        "aliases": [
+          "fillet",
+          "fish fillet",
+          "فيليه"
+        ]
+      },
+      {
+        "item_ar": "جمبري",
+        "item_en": "Shrimp",
+        "weight_g": 100,
+        "substitutes": [],
+        "aliases": [
+          "shrimp",
+          "gambary"
+        ]
+      },
+      {
+        "item_ar": "كبده",
+        "item_en": "Liver",
+        "weight_g": 130,
+        "substitutes": [],
+        "aliases": [
+          "كبدة"
+        ]
+      },
+      {
+        "item_ar": "تونه",
+        "item_en": "Tuna",
+        "weight_g": 100,
+        "substitutes": [],
+        "aliases": [
+          "تونا",
+          "canned tuna",
+          "تونة",
+          "tuna"
+        ]
+      },
+      {
+        "item_ar": "لحم صدور",
+        "item_en": "Chicken Breast",
+        "weight_g": 120,
+        "substitutes": [],
+        "aliases": [
+          "دجاج",
+          "صدور دجاج",
+          "chicken",
+          "فراخ",
+          "frakh",
+          "chicken breast"
+        ]
+      },
+      {
+        "item_ar": "كبده دجاج",
+        "item_en": "Chicken Liver",
+        "weight_g": 120,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "لحم ارانب",
+        "item_en": "Rabbit Meat",
+        "weight_g": 100,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "لحم احمر",
+        "item_en": "Red Meat",
+        "weight_g": 120,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "بيض كامل",
+        "item_en": "Whole Eggs",
+        "weight_g": 250,
+        "substitutes": [],
+        "aliases": [
+          "eggs",
+          "bed",
+          "whole eggs",
+          "egg",
+          "بيض",
+          "whole egg"
+        ]
+      },
+      {
+        "item_ar": "لحم وراك",
+        "item_en": "Thigh Meat",
+        "weight_g": 100,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "فيتا لايت",
+        "item_en": "Light Feta Cheese",
+        "weight_g": 150,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "فصوص رومي",
+        "item_en": "Turkey Slices",
+        "weight_g": 120,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "روس بيف",
+        "item_en": "Roast Beef",
+        "weight_g": 120,
+        "substitutes": [],
+        "aliases": []
+      }
+    ]
+  },
+  {
+    "category_ar": "كربوهيدرات",
+    "category_en": "Carbohydrates",
+    "note": "الميزان قبل الطهي",
+    "items": [
+      {
+        "item_ar": "كورن فلكس",
+        "item_en": "Corn Flakes",
+        "weight_g": 55,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "مكرونه",
+        "item_en": "Pasta",
+        "weight_g": 65,
+        "substitutes": [],
+        "aliases": [
+          "macaroni",
+          "مكرونة",
+          "spaghetti",
+          "vermicelli",
+          "شعريه",
+          "makarona",
+          "pasta"
+        ]
+      },
+      {
+        "item_ar": "رز",
+        "item_en": "Rice",
+        "weight_g": 60,
+        "substitutes": [],
+        "aliases": [
+          "roz",
+          "rice",
+          "white rice",
+          "ruz"
+        ]
+      },
+      {
+        "item_ar": "برغل",
+        "item_en": "Bulgur",
+        "weight_g": 60,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "فريك",
+        "item_en": "Freekeh",
+        "weight_g": 60,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "فينو",
+        "item_en": "Fino Bread",
+        "weight_g": 90,
+        "substitutes": [],
+        "aliases": [
+          "فينو",
+          "عيش فينو",
+          "فينو عيش",
+          "fino",
+          "bread",
+          "عيش",
+          "3esh fino"
+        ]
+      },
+      {
+        "item_ar": "خبز شامي",
+        "item_en": "Levantine Bread",
+        "weight_g": 85,
+        "substitutes": [],
+        "aliases": [
+          "عيش شامي",
+          "شامي"
+        ]
+      },
+      {
+        "item_ar": "خبز بلدي",
+        "item_en": "Baladi Bread",
+        "weight_g": 100,
+        "substitutes": [],
+        "aliases": [
+          "عيش بلدي",
+          "بلدي"
+        ]
+      },
+      {
+        "item_ar": "توست ابيض",
+        "item_en": "White Toast",
+        "weight_g": 90,
+        "substitutes": [],
+        "aliases": [
+          "توست أبيض",
+          "white toast"
+        ]
+      },
+      {
+        "item_ar": "توست اسمر",
+        "item_en": "Brown Toast",
+        "weight_g": 90,
+        "substitutes": [],
+        "aliases": [
+          "توست أسمر",
+          "brown toast"
+        ]
+      },
+      {
+        "item_ar": "كوز ذره مشوي",
+        "item_en": "Grilled Corn Cob",
+        "weight_g": 90,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "بطاطس",
+        "item_en": "Potatoes",
+        "weight_g": 260,
+        "substitutes": [],
+        "aliases": [
+          "potatoes",
+          "potato",
+          "batates"
+        ]
+      },
+      {
+        "item_ar": "كيزر",
+        "item_en": "Kaiser Roll",
+        "weight_g": 90,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "قلقاس",
+        "item_en": "Taro",
+        "weight_g": 180,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "بطاطا",
+        "item_en": "Sweet Potatoes",
+        "weight_g": 260,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "كينوا",
+        "item_en": "Quinoa",
+        "weight_g": 60,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "شوفان",
+        "item_en": "Oats",
+        "weight_g": 60,
+        "substitutes": [],
+        "aliases": [
+          "shofan",
+          "oats",
+          "oatmeal"
+        ]
+      },
+      {
+        "item_ar": "بقسماط",
+        "item_en": "Breadcrumbs",
+        "weight_g": 60,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "بليله",
+        "item_en": "Belila (Wheat)",
+        "weight_g": 60,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "ذره فشار",
+        "item_en": "Popcorn",
+        "weight_g": 65,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "تورتيلا",
+        "item_en": "Tortilla",
+        "weight_g": 80,
+        "substitutes": [],
+        "aliases": []
+      }
+    ]
+  },
+  {
+    "category_ar": "دهون صحية",
+    "category_en": "Healthy Fats",
+    "note": "يفضل اختيار صنف من نفس المجموعه",
+    "items": [
+      {
+        "item_ar": "لوز",
+        "item_en": "Almonds",
+        "weight_g": 20,
+        "substitutes": [
+          "المجموعه الاولي"
+        ],
+        "aliases": [
+          "loz",
+          "almonds",
+          "almond"
+        ]
+      },
+      {
+        "item_ar": "كاجو",
+        "item_en": "Cashews",
+        "weight_g": 20,
+        "substitutes": [
+          "المجموعه الاولي"
+        ],
+        "aliases": []
+      },
+      {
+        "item_ar": "بندق",
+        "item_en": "Hazelnuts",
+        "weight_g": 20,
+        "substitutes": [
+          "المجموعه الاولي"
+        ],
+        "aliases": []
+      },
+      {
+        "item_ar": "فول سوداني",
+        "item_en": "Peanuts",
+        "weight_g": 20,
+        "substitutes": [
+          "المجموعه الاولي"
+        ],
+        "aliases": [
+          "سوداني",
+          "sodani",
+          "peanuts"
+        ]
+      },
+      {
+        "item_ar": "بيكان",
+        "item_en": "Pecans",
+        "weight_g": 20,
+        "substitutes": [
+          "المجموعه الاولي"
+        ],
+        "aliases": []
+      },
+      {
+        "item_ar": "فستق",
+        "item_en": "Pistachios",
+        "weight_g": 20,
+        "substitutes": [
+          "المجموعه الاولي"
+        ],
+        "aliases": []
+      },
+      {
+        "item_ar": "زيت زيتون",
+        "item_en": "Olive Oil",
+        "weight_g": "3 tsp",
+        "substitutes": [
+          "المجموعه التانيه"
+        ],
+        "aliases": [
+          "olive oil"
+        ]
+      },
+      {
+        "item_ar": "زيتون اسود",
+        "item_en": "Black Olives",
+        "weight_g": 15,
+        "substitutes": [
+          "المجموعه التانيه"
+        ],
+        "aliases": []
+      },
+      {
+        "item_ar": "افوكادو",
+        "item_en": "Avocado",
+        "weight_g": 60,
+        "substitutes": [
+          "المجموعه التانيه"
+        ],
+        "aliases": []
+      },
+      {
+        "item_ar": "عين جمل",
+        "item_en": "Walnuts",
+        "weight_g": 20,
+        "substitutes": [
+          "المجموعه التانيه"
+        ],
+        "aliases": []
+      },
+      {
+        "item_ar": "زيت نباتي",
+        "item_en": "Vegetable Oil",
+        "weight_g": "3 tsp",
+        "substitutes": [
+          "المجموعه التانيه"
+        ],
+        "aliases": []
+      },
+      {
+        "item_ar": "بذور كتان",
+        "item_en": "Flax Seeds",
+        "weight_g": 20,
+        "substitutes": [
+          "المجموعه التانيه"
+        ],
+        "aliases": []
+      },
+      {
+        "item_ar": "بذور شيا",
+        "item_en": "Chia Seeds",
+        "weight_g": 20,
+        "substitutes": [
+          "المجموعه التانيه"
+        ],
+        "aliases": []
+      },
+      {
+        "item_ar": "زبد طبيعي",
+        "item_en": "Natural Butter",
+        "weight_g": 15,
+        "substitutes": [
+          "المجموعه التالته"
+        ],
+        "aliases": []
+      },
+      {
+        "item_ar": "زبد صناعي",
+        "item_en": "Margarine",
+        "weight_g": 15,
+        "substitutes": [
+          "المجموعه التالته"
+        ],
+        "aliases": []
+      },
+      {
+        "item_ar": "زيت جوز هند",
+        "item_en": "Coconut Oil",
+        "weight_g": "3 tsp",
+        "substitutes": [
+          "المجموعه التالته"
+        ],
+        "aliases": []
+      }
+    ]
+  },
+  {
+    "category_ar": "فواكه",
+    "category_en": "Fruits",
+    "note": "الميزان قبل الطهي",
+    "items": [
+      {
+        "item_ar": "بطيخ",
+        "item_en": "Watermelon",
+        "weight_g": 200,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "تفاح",
+        "item_en": "Apple",
+        "weight_g": 100,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "كمثري",
+        "item_en": "Pear",
+        "weight_g": 100,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "حرنكش",
+        "item_en": "Physalis",
+        "weight_g": 85,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "يوسفي",
+        "item_en": "Mandarin",
+        "weight_g": 100,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "تين شوكي",
+        "item_en": "Prickly Pear",
+        "weight_g": 100,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "توت",
+        "item_en": "Berries",
+        "weight_g": 85,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "كاكا",
+        "item_en": "Persimmon",
+        "weight_g": 65,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "تين برشومي",
+        "item_en": "Fresh Figs",
+        "weight_g": 85,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "برتقال",
+        "item_en": "Orange",
+        "weight_g": 100,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "فراوله",
+        "item_en": "Strawberry",
+        "weight_g": 200,
+        "substitutes": [],
+        "aliases": [
+          "فراولة",
+          "strawberry"
+        ]
+      },
+      {
+        "item_ar": "مانجا",
+        "item_en": "Mango",
+        "weight_g": 100,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "كيوي",
+        "item_en": "Kiwi",
+        "weight_g": 100,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "اناناس",
+        "item_en": "Pineapple",
+        "weight_g": 100,
+        "substitutes": [],
+        "aliases": [
+          "أناناس",
+          "pineapple"
+        ]
+      },
+      {
+        "item_ar": "عنب",
+        "item_en": "Grapes",
+        "weight_g": 80,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "برقوق",
+        "item_en": "Plums",
+        "weight_g": 85,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "جوافه",
+        "item_en": "Guava",
+        "weight_g": 100,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "شمام",
+        "item_en": "Melon",
+        "weight_g": 200,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "كانتلوب",
+        "item_en": "Cantaloupe",
+        "weight_g": 200,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "خوخ",
+        "item_en": "Peach",
+        "weight_g": 100,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "رمان",
+        "item_en": "Pomegranate",
+        "weight_g": 85,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "مشمش",
+        "item_en": "Apricot",
+        "weight_g": 100,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "بلح",
+        "item_en": "Dates",
+        "weight_g": 20,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "موز",
+        "item_en": "Banana",
+        "weight_g": 60,
+        "substitutes": [],
+        "aliases": [
+          "banana",
+          "moz"
+        ]
+      }
+    ]
+  },
+  {
+    "category_ar": "فواكه مجففه",
+    "category_en": "Dried Fruits",
+    "note": "",
+    "items": [
+      {
+        "item_ar": "زبيب",
+        "item_en": "Raisins",
+        "weight_g": 20,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "قراصيا",
+        "item_en": "Prunes",
+        "weight_g": 20,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "تين",
+        "item_en": "Dried Figs",
+        "weight_g": 25,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "مشمش",
+        "item_en": "Dried Apricot",
+        "weight_g": 20,
+        "substitutes": [],
+        "aliases": []
+      }
+    ]
+  },
+  {
+    "category_ar": "خضروات",
+    "category_en": "Vegetables",
+    "note": "الميزان قبل الطهي",
+    "items": [
+      {
+        "item_ar": "فلفل الوان",
+        "item_en": "Colored Peppers",
+        "weight_g": 50,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "خس",
+        "item_en": "Lettuce",
+        "weight_g": 100,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "خيار",
+        "item_en": "Cucumber",
+        "weight_g": 100,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "كوسه",
+        "item_en": "Zucchini",
+        "weight_g": 50,
+        "substitutes": [],
+        "aliases": [
+          "كوسة",
+          "zucchini"
+        ]
+      },
+      {
+        "item_ar": "باميه",
+        "item_en": "Okra",
+        "weight_g": 50,
+        "substitutes": [],
+        "aliases": [
+          "بامية",
+          "okra"
+        ]
+      },
+      {
+        "item_ar": "جرجير",
+        "item_en": "Arugula",
+        "weight_g": 100,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "باذنجان",
+        "item_en": "Eggplant",
+        "weight_g": 150,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "فاصوليا خضرا",
+        "item_en": "Green Beans",
+        "weight_g": 50,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "جزر",
+        "item_en": "Carrots",
+        "weight_g": 50,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "قرنبيط",
+        "item_en": "Cauliflower",
+        "weight_g": 100,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "بنجر",
+        "item_en": "Beets",
+        "weight_g": 50,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "طماطم",
+        "item_en": "Tomatoes",
+        "weight_g": 100,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "مشروم",
+        "item_en": "Mushrooms",
+        "weight_g": 100,
+        "substitutes": [],
+        "aliases": [
+          "مشرومز",
+          "mushroom"
+        ]
+      },
+      {
+        "item_ar": "خرشوف",
+        "item_en": "Artichoke",
+        "weight_g": 50,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "بروكلي",
+        "item_en": "Broccoli",
+        "weight_g": 50,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "ملوخيه",
+        "item_en": "Molokhia",
+        "weight_g": 50,
+        "substitutes": [],
+        "aliases": [
+          "ملوخية",
+          "molokhia"
+        ]
+      },
+      {
+        "item_ar": "سبانخ",
+        "item_en": "Spinach",
+        "weight_g": 100,
+        "substitutes": [],
+        "aliases": []
+      }
+    ]
+  },
+  {
+    "category_ar": "منتجات البان",
+    "category_en": "Dairy Products",
+    "note": "يفضل الالتزام بنوع الالبان المكتوب في النظام الغذائي",
+    "items": [
+      {
+        "item_ar": "لبن بودر",
+        "item_en": "Powdered Milk",
+        "weight_g": 30,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "لبن كامل الدسم",
+        "item_en": "Full Fat Milk",
+        "weight_g": 240,
+        "substitutes": [],
+        "aliases": [
+          "milk",
+          "laban",
+          "لبن",
+          "halib"
+        ]
+      },
+      {
+        "item_ar": "كامل الدسم زبادي",
+        "item_en": "Full Fat Yogurt",
+        "weight_g": 240,
+        "substitutes": [],
+        "aliases": [
+          "zabadry",
+          "yogurt",
+          "zabadi",
+          "زبادي",
+          "youghurt"
+        ]
+      },
+      {
+        "item_ar": "لبن خالي الدسم",
+        "item_en": "Skimmed Milk",
+        "weight_g": 240,
+        "substitutes": [],
+        "aliases": []
+      }
+    ]
+  },
+  {
+    "category_ar": "بقوليات",
+    "category_en": "Legumes",
+    "note": "الميزان قبل الطهي",
+    "items": [
+      {
+        "item_ar": "حمص",
+        "item_en": "Chickpeas",
+        "weight_g": 25,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "عدس",
+        "item_en": "Lentils",
+        "weight_g": 30,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "فاصولياء حمراء",
+        "item_en": "Red Kidney Beans",
+        "weight_g": 30,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "فاصولياء بيضاء",
+        "item_en": "White Beans",
+        "weight_g": 30,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "لوبيا",
+        "item_en": "Black-eyed Peas",
+        "weight_g": 30,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "فول",
+        "item_en": "Fava Beans",
+        "weight_g": 30,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "ترمس",
+        "item_en": "Lupini Beans",
+        "weight_g": 50,
+        "substitutes": [],
+        "aliases": []
+      },
+      {
+        "item_ar": "بسله",
+        "item_en": "Peas",
+        "weight_g": 30,
+        "substitutes": [],
+        "aliases": []
+      }
+    ]
+  }
+]

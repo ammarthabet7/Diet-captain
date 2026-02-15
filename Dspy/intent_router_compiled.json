@@ -1,0 +1,105 @@
+{
+  "predict": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "query": "as5an ezay abl eltamren?",
+        "reasoning": "Not supplied for this particular example.",
+        "intent": "GENERAL_QA"
+      },
+      {
+        "augmented": true,
+        "query": "tb ezay a5tar elawzan?",
+        "reasoning": "Not supplied for this particular example.",
+        "intent": "GENERAL_QA"
+      },
+      {
+        "augmented": true,
+        "query": "ya3ni eh super set?",
+        "reasoning": "Not supplied for this particular example.",
+        "intent": "GENERAL_QA"
+      },
+      {
+        "augmented": true,
+        "query": "ya3ni eh drop sets?",
+        "reasoning": "Drop sets di tari2a fel tamrin bet3mel fel tamrin el 3adi el 3adi. el tari2a di bet3mel kaza set wara ba3d kol set bey2al shewaya 3an el set elli ablo. keda el 3adal bet3mel tamrin a2wa.",
+        "intent": "GENERAL_QA"
+      },
+      {
+        "query": "abdel el zeit b samna ad eh?",
+        "intent": "MATH_SUBSTITUTION"
+      },
+      {
+        "query": "eh el supplements elly momken a5od-ha?",
+        "intent": "GENERAL_QA"
+      },
+      {
+        "query": "good evening يا كابتن",
+        "intent": "CHIT_CHAT"
+      },
+      {
+        "query": "عايز ابدل 30g nuts ب peanut butter قد ايه؟",
+        "intent": "MATH_SUBSTITUTION"
+      },
+      {
+        "query": "hal el tamreen fel beet zay el gym?",
+        "intent": "GENERAL_QA"
+      },
+      {
+        "query": "عايز bulk plan + workout split 4 days",
+        "intent": "GENERAL_QA"
+      },
+      {
+        "query": "eh elpartial reps da?",
+        "intent": "GENERAL_QA"
+      },
+      {
+        "query": "el dropset mofeed le el dakhama?",
+        "intent": "GENERAL_QA"
+      },
+      {
+        "query": "50g loz momken yb2u badalhum sudani ad eh?",
+        "intent": "MATH_SUBSTITUTION"
+      },
+      {
+        "query": "eh afdal masdar protein nabaty?",
+        "intent": "GENERAL_QA"
+      },
+      {
+        "query": "cardio?",
+        "intent": "GENERAL_QA"
+      },
+      {
+        "query": "eh badayel el frakh 3shan zah2t?",
+        "intent": "GENERAL_QA"
+      }
+    ],
+    "signature": {
+      "instructions": "Classify user query into intents: GENERAL_QA, CHIT_CHAT, MATH_SUBSTITUTION.",
+      "fields": [
+        {
+          "prefix": "Query:",
+          "description": "${query}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Intent:",
+          "description": "One of: GENERAL_QA, CHIT_CHAT, MATH_SUBSTITUTION"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.11",
+      "dspy": "3.0.4",
+      "cloudpickle": "3.1"
+    }
+  }
+}

@@ -1,0 +1,136 @@
+You’re building a learning RAG chatbot for Diet & Cheat (go and search for them )moderators: it should answer repeated questions using your PDFs (recipes, nutrition education, food exchange tables, and training guide) so moderators don’t waste time replying to the same things.​
+Project & data (brief)
+Your knowledge base is 4 PDFs with different “content shapes”, which is the main challenge.​
+Recipe book: lots of categorized recipes (e.g., “CHICKENS”, “EGG”, etc.) and per-item macros like calories/carbs/fat/protein.​
+Food Exchange List: looks like dense numeric tables (hard for embeddings if chunked badly).​
+Nutrition ebook: explanatory text + formulas/terms (TDEE, BMR, macros, amino acids).​
+Training guide: training concepts and terms (RPE/RIR, HIIT, progressive overload).​
+Main challenges
+Different document types (recipes vs tables vs narrative text) require different parsing/chunking strategies to keep meaning intact.​
+Tables and numbers are easy to break by naive chunking, and they’re often retrieved better by keyword/BM25 than embeddings alone.​
+User questions are not uniform (substitution, yes/no permission, macros calculations, training advice), which affects caching and routing.​
+I am building this project to learn-first, not production, so the pipeline should be understandable and debuggable.
+
+Evaluation criteria (per pipeline part)
+A) Document parsing & chunking
+Goal: chunks should be “self-contained units” (a whole recipe; a whole small table; a coherent paragraph section).​
+Manual spot-check: sample ~30 chunks and label “good/bad chunk boundary”.
+Failure signs: recipe split in the middle, table rows separated from headers, or mixed topics in one chunk.​
+-i want to see the chunks myself
+
+B) Embeddings (Swan baseline)
+Goal: the top retrieved chunks actually contain the answer.
+Build 30–50 real moderator-style questions (Arabic/English/mixed).​
+Metrics:
+Recall@k: does the correct chunk appear in top-k?
+MRR: how high is the first correct chunk ranked?
+
+C) Retrieval (hybrid candidate generation)
+Goal: don’t miss answers (high recall).
+Compare:
+Dense-only vs BM25-only vs Hybrid (dense+BM25).
+Metric: Recall@50 (or @100) should improve with hybrid, especially for table/numeric queries.​
+D) Reranking (cross-encoder)
+Goal: push best evidence to top (high precision).
+Metric: Precision@5 (how many of top-5 are actually relevant).
+Human check: for 20 questions, review top-5 ordering.
+
+E) Generation (LLM answer)
+Goal: moderators see correct, grounded answers.
+Use RAGAS metrics like faithfulness/relevancy to catch hallucination or context mismatch.
+Add internal CoT for the model only (not shown to users) to help multi-step questions like calculations.​
+
+F) Semantic caching
+Goal: faster + cheaper without serving wrong answers.
+Metrics:
+Cache hit rate
+“Wrong-cache-hit rate” (false positives)
+Must be evaluated on tricky near-duplicates like “substitute open-ended” vs “specific substitute yes/no”.
+
+G) Router (doc-type routing)
+Goal: reduce search space and improve precision.
+Metric: router accuracy on a labeled set of ~50 queries (“nutrition vs training vs recipe vs table”).​
+
+Final pipeline:
+0) Inputs
+User message .
+1) Ingestion (offline)
+You will use different chunking strategies (not fixed chunks) and you’ll ignore metadata for now except the minimal routing label you agreed on.
+PDF parsing
+Extract text from PDFs.
+For pages with images/tables: try to extract text
+
+Chunking (structure-aware)
+Recipe book: chunk by recipe unit / section (don’t split a recipe).​
+Nutrition ebook: chunk by headings/paragraph blocks (normal text chunking).​
+Training guide: chunk by topic blocks (RPE/RIR, HIIT, deload, etc.).​
+Exchange list: chunk by table blocks / row groups (keep header + rows together).​
+
+Doc-type labeling (minimal)
+You will label each chunk with only one small tag:
+doc_type ∈ {recipe, nutrition, training, table}​
+
+2) Indexing (offline)
+Dense index (Chroma)
+Embedding model: start with Swan (baseline).
+Store chunk text + doc_type tag inside Chroma.
+Sparse index (BM25)
+Build a BM25 index over the same chunk texts (store chunk_id → text).
+This is separate from Chroma.
+
+3) Query-time pipeline (online)
+Step 3.1: Query router (cheap classifier)
+Input: user query
+Output: predicted doc_type:
+workout/RPE/RIR/cardio → training​
+macros/calories/protein/TDEE/BMR → nutrition​
+recipe/how to make/ingredients → recipe​
+exchange list/portion/بدل → table​
+
+Use it in a “soft” way:
+Either filter retrieval to that doc_type, or several documents togther if the user asks several questions in the same query
+
+Step 3.2: Intent + entities extraction (for caching safety)
+Run a tiny intent classifier:
+substitution_open
+substitution_specific
+allowed_food_yesno
+macros_calculation
+recipe_request
+training_advice
+Extract entities:
+food_item_from, food_item_to (when present)
+
+Step 3.3: Cache lookup (semantic, but safe)
+Cache key bucket:
+Do semantic similarity lookup (threshold like 0.85–0.90).
+If hit → return cached final answer (fast).
+
+Step 3.4: Hybrid candidate retrieval (only if cache miss)
+Run both retrievers in parallel, on the routed subset:
+Dense (Chroma bi-encoder): top 50
+BM25: top 50
+Merge by chunk_id → 80–120 candidates.
+Role of hybrid here: increase recall so you don’t miss tables/numbers and exact matches.​
+
+Step 3.5: Cross-encoder reranking
+Rerank the merged candidates with a cross-encoder and keep top 5–10.
+
+Step 3.6: LLM answer generation (RAG)
+Prompt includes: rules + top contexts.
+Enable internal CoT for the model (not shown to user).
+Output should be short, moderator-friendly, and grounded.(in egyptian formal words dont use formal arabic)
+
+Step 3.7: Evaluate + log (learning loop)
+Log: query, routed doc_type, retrieval results, rerank results, answer.
+Run RAGAS on your evaluation set regularly (e.g., after every change).
+
+Step 3.8: Cache write
+Store:
+query embedding (for semantic search )
+final answer
+retrieved chunk ids (optional for debugging)
+timestamp/TTL (optional)
+
+
+now i want u to  move with me step by step implementing this project , dont rush for code now just ask me any  thing that isnt clear , i will work locally with ollama(its my suggestion i want to hear ur opinion, take care we want an llm that is good with arabic and egyptian dialects) a rtx 3050 , now if u have any question tell me 

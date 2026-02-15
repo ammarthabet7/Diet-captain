@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>RAG Mixed Test</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #f4f4f9; padding: 20px; text-align: right; }
+        h1 { color: #2c3e50; text-align: center; }
+        .summary { background: #fff; padding: 20px; border-radius: 8px; margin-bottom: 20px; display: flex; justify-content: space-around; }
+        table { width: 100%; border-collapse: collapse; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; }
+        th, td { padding: 12px 15px; text-align: right; border-bottom: 1px solid #ddd; }
+        th { background-color: #34495e; color: #fff; }
+        .pass { color: #27ae60; font-weight: bold; }
+        .fail { color: #c0392b; font-weight: bold; }
+        .chunk-box { background: #ecf0f1; padding: 8px; margin: 4px 0; border-right: 4px solid #bdc3c7; font-size: 0.85em; text-align: left; direction: ltr; }
+        .answer-box { background: #e8f6f3; padding: 10px; border-right: 4px solid #1abc9c; margin-top: 10px; }
+        .details-row { display: none; background-color: #fcfcfc; }
+        .details-btn { cursor: pointer; color: #2980b9; text-decoration: underline; }
+    </style>
+    <script>
+        function toggleDetails(id) {
+            var row = document.getElementById('details-' + id);
+            row.style.display = row.style.display === 'table-row' ? 'none' : 'table-row';
+        }
+    </script>
+</head>
+<body>
+    <h1>RAG Stress Test (Mixed Arabic + English)</h1>
+    <div class="summary">
+        <div>Total: <b>2</b></div>
+        <div style="color: #27ae60">Passed: <b>2</b></div>
+        <div style="color: #c0392b">Failed: <b>0</b></div>
+    </div>
+    <table>
+        <thead><tr><th>#</th><th>Query</th><th>Type</th><th>Score</th><th>Status</th><th>Action</th></tr></thead>
+        <tbody>
+        <tr><td>1</td><td dir="auto">ايه هو ال Super Set؟</td><td>MIXED_AR_EN</td><td>0.8859</td>
+        <td class="pass">PASS</td>
+        <td><span class="details-btn" onclick="toggleDetails(1)">Details</span></td></tr>
+        <tr id="details-1" class="details-row"><td colspan="6">
+        <strong>Expected:</strong> تمرينين, راحة, عضلة<br><strong>Found:</strong> راحة<br>
+        <div class="answer-box"><strong>Answer:</strong><br>🎯 عبارة عن انت تختار تمرينتين و تلعب مجموعة من اول تمرينة و بعدها علطول مجموعة من التانية من غير راحة في النص.</div>
+        <strong>Context:</strong><div class='chunk-box'><b>[0.886] training_guide</b><br>كل انك تزود عداتك, ممكن تثبت الوزن ال-انت شايله لو مش قادر تزود عنه و تزود عدد التكرارات بالوزن ده. حتي لو عدة واحدة, ده كافي انه يحط جسمك تحت ضغط جديد. ## رابع شكل انك تقلل مدة ال...</div><div class='chunk-box'><b>[0.605] training_guide</b><br>ستخدمه لزيادة صعوبة التمرين. عبارة عن ايه؟ عبارة عن انك بتختار تمرينتين و تلعب مجموعة من اول تمرينة و بعدها علطول مجموعة من تاني تمرينه من غير راحة في النص. بعد ما تخلص كدة انت خلص...</div><div class='chunk-box'><b>[0.003] training_guide</b><br>rsets كانوا تمرنتين ورا بعض؟ ال Giant Sets لثالث تمارين ورا بعض لنفس العضلة. كمثال, هتلعب مجموعة من ثالث تمارين مختلفين لعضلة الظهر ورا بعض من غير راحة. لما تخلصهم كدة انت خلصت مجم...</div></td></tr>
+        
+
+        <tr><td>2</td><td dir="auto">ايه فايدة ال Deload week؟</td><td>MIXED_AR_EN</td><td>0.8741</td>
+        <td class="pass">PASS</td>
+        <td><span class="details-btn" onclick="toggleDetails(2)">Details</span></td></tr>
+        <tr id="details-2" class="details-row"><td colspan="6">
+        <strong>Expected:</strong> راحة, استشفاء, أوزان<br><strong>Found:</strong> استشفاء<br>
+        <div class="answer-box"><strong>Answer:</strong><br>🎯 فائدة ال Deload الاسبوع هي تريح جسمك ومفاصلك وده يساعده على الاستشفاء بشكل أفضل ويخلي معدل الارهاق عندك قل جامد، علشان كده تقدر تكمل زيادة حمل التمرين بتاعك بسهولة وتطور مستمر.</div>
+        <strong>Context:</strong><div class='chunk-box'><b>[0.874] training_guide</b><br>كل ما معدل الارهاق عندك زاد كل ما هتلاقي لياقتك البدنية بتقل و ادائك الرياضي بيقل و فرص اصابتك كمان بتزيد. و العكس صحيح. طيب استفاد ايه من كل ده؟ لازم يبقي لينا طريقة نحل بيها المو...</div><div class='chunk-box'><b>[0.581] training_guide</b><br>يه علشان لما ترجع الاسبوع هتلاقي معدل الارهاق عندك قل جامد و تقدر انك تكمل زيادة حمل التمرين بتاعك. ال Deload ملوش وقت محدد, يعني مش بعد 3 اسابيع او 6 و هكذا, الموضوع بيختلف من شخص...</div><div class='chunk-box'><b>[0.055] training_guide</b><br>صبي بتاعك مع المحافظة علي قوتك. ## ازاي اطبقه؟ عندك كذه طريقة ممكن تعمل فيها Deload. **اول اسلوب،** هو انك تقلل مجاميعك للنص و تلعب بنفس اوزانك و عداتك. يعني لو بتلعب ٤ مجاميع للتم...</div></td></tr>
+        </tbody>
+    </table>
+</body>
+</html>

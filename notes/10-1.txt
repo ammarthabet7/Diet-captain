@@ -1,0 +1,4 @@
+simulate ragas, aw hawel tsl7ha
+test b history
+--
+lma yb2a kolo tmam kml aws,postgres db,semantic cashe, wp integration

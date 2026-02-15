@@ -1,0 +1,476 @@
+📋 UPDATED ROADMAP - DIET & CHEAT PROJECT
+══════════════════════════════════════════════════════════════════
+DIET & CHEAT - PRODUCTION POC
+COMPLETE ROADMAP (ENHANCED)
+══════════════════════════════════════════════════════════════════
+
+┌─────────────────────────────────────────────────────────────────┐
+│ PHASE 0: PROJECT ORGANIZATION & SECURITY [~1 hour] │
+│ (CRITICAL - DO THIS FIRST!) │
+├─────────────────────────────────────────────────────────────────┤
+│ │
+│ □ 0.1 Restructure project folders │
+│ CURRENT STATE (messy): │
+│ DIET AND CHEAT/ │
+│ ├── chat.py │
+│ ├── retriever.py │
+│ ├── ingest_chroma.py │
+│ ├── 13+ other files at root... │
+│ └── ready_data/ │
+│ │
+│ TARGET STATE (clean): │
+│ diet-cheat/ │
+│ ├── src/ # All code here │
+│ │ ├── init.py │
+│ │ ├── chat.py # Main engine │
+│ │ ├── retriever.py # Search logic │
+│ │ └── config.py # NEW: Configuration │
+│ ├── data/ # Renamed from ready_data │
+│ │ ├── food_exchange_clean.json │
+│ │ └── *.md files │
+│ ├── chroma_db/ # Vector database │
+│ ├── logs/ # Keep as-is │
+│ ├── tests/ # NEW: Proper test folder │
+│ │ └── init.py │
+│ ├── scripts/ # NEW: Utility scripts │
+│ │ ├── ingest_chroma.py │
+│ │ └── preprocess_pipeline.py │
+│ ├── .env # NEW: Secret keys (private) │
+│ ├── .env.example # NEW: Template (public) │
+│ ├── .gitignore # NEW: What Git ignores │
+│ ├── requirements.txt # NEW: Dependencies list │
+│ └── README.md # NEW: Documentation │
+│ │
+│ □ 0.2 Secure API keys (CRITICAL SECURITY FIX!) │
+│ → Create .env file │
+│ → Move hardcoded keys from chat.py: │
+│ CURRENT (LINE 15-16): │
+│ GEMINI_API_KEY = "AIzaSy..." # 🔴 EXPOSED │
+│ HF_TOKEN = "hf_gUCtPn..." # 🔴 EXPOSED │
+│ │
+│ NEW: │
+│ GEMINI_API_KEY = os.getenv("GEMINI_API_KEY") │
+│ HF_TOKEN = os.getenv("HF_TOKEN") │
+│ │
+│ □ 0.3 Generate requirements.txt │
+│ → From your pip list (97 packages!) │
+│ → Create minimal version (only direct dependencies) │
+│ │
+│ □ 0.4 Create .gitignore │
+│ → Prevent committing secrets, cache files, etc. │
+│ → Templates: .env, pycache/, chroma_db/, logs/ │
+│ │
+│ □ 0.5 Create basic README.md │
+│ → Project description │
+│ → Setup instructions │
+│ → How to run │
+│ │
+│ OUTCOME: Clean, secure, professional project structure │
+│ CV SKILL: Project organization, Security best practices │
+│ │
+│ ⚠️ CRITICAL NOTES: │
+│ → This phase prevents security leaks when you push to GitHub │
+│ → Makes rest of project easier to manage │
+│ → Industry-standard structure (shows maturity to employers) │
+│ │
+└─────────────────────────────────────────────────────────────────┘
+↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PHASE 1: FEATURE COMPLETION [~2 hours] │
+├─────────────────────────────────────────────────────────────────┤
+│ │
+│ □ 1.1 Create session_manager.py │
+│ → In-memory conversation history │
+│ → Semantic caching for similar questions │
+│ │
+│ □ 1.2 Update chat.py │
+│ → Integrate history (bot remembers context) │
+│ → Integrate cache (skip LLM for repeated questions) │
+│ → ✅ Already fixed: API keys via environment variables │
+│ │
+│ □ 1.3 Create api.py (FastAPI) │
+│ → POST /chat endpoint │
+│ → GET /health endpoint │
+│ → GET /stats endpoint │
+│ │
+│ □ 1.4 Test locally │
+│ → Run server │
+│ → Test all endpoints │
+│ → Verify history works │
+│ → Verify cache works │
+│ │
+│ ✅ STRENGTHS IDENTIFIED IN YOUR CODE: │
+│ → Hybrid retrieval (Vector + BM25 + Rerank) - Production! 🔥│
+│ → Trace logging (chat.py) - Shows debugging maturity 👏 │
+│ → show_progress_bar=False fix (line 199) - Good catch! ✅ │
+│ │
+│ ⚠️ IMPROVEMENTS TO ADD: │
+│ → Add fallback if Hugging Face completely fails │
+│ → Add timeout handling for external API calls │
+│ → Add input validation (empty queries, etc.) │
+│ │
+│ OUTCOME: Fully working app on your laptop │
+│ │
+└─────────────────────────────────────────────────────────────────┘
+↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PHASE 2: GIT & GITHUB SETUP [~1 hour] │
+├─────────────────────────────────────────────────────────────────┤
+│ │
+│ □ 2.1 Install Git (if not installed) │
+│ → Download from git-scm.com │
+│ → Verify: Open CMD/PowerShell, type: git --version │
+│ │
+│ □ 2.2 Learn basic Git commands (we'll practice together) │
+│ → git init (start tracking project) │
+│ → git add (stage changes) │
+│ → git commit (save snapshot) │
+│ → git push (upload to GitHub) │
+│ → git status (check what changed) │
+│ → git log (see history) │
+│ │
+│ □ 2.3 Create GitHub account (if needed) │
+│ → Go to github.com │
+│ → Sign up (free) │
+│ │
+│ □ 2.4 Create repository on GitHub │
+│ → Name: diet-cheat-bot │
+│ → Description: AI Nutrition Coach with RAG │
+│ → Private (for now, make public later for portfolio) │
+│ │
+│ □ 2.5 First commit │
+│ → Stage all files (except .env!) │
+│ → Commit message: "Initial commit: Clean structure" │
+│ │
+│ □ 2.6 Push code to GitHub │
+│ → Connect local repo to GitHub │
+│ → Push main branch │
+│ → Verify files appear on GitHub │
+│ │
+│ ✅ SAFETY CHECK: │
+│ → .gitignore is working (.env NOT on GitHub) │
+│ → README.md displays nicely │
+│ → File structure looks clean │
+│ │
+│ OUTCOME: Code safely stored on GitHub │
+│ CV SKILL: Git, GitHub, Version Control │
+│ │
+└─────────────────────────────────────────────────────────────────┘
+↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PHASE 3: TESTING [~1 hour] │
+├─────────────────────────────────────────────────────────────────┤
+│ │
+│ □ 3.1 Learn pytest basics │
+│ → What is a test? (Function that checks if code works) │
+│ → Why write tests? (Catch bugs early, confidence) │
+│ → How to run: pytest tests/ │
+│ │
+│ □ 3.2 Write basic tests │
+│ tests/ │
+│ ├── init.py │
+│ ├── test_session_manager.py │
+│ ├── test_api.py │
+│ ├── test_retriever.py │
+│ └── test_food_resolution.py │
+│ │
+│ Example test structure: │
+│ def test_exact_food_match(): │
+│ result = resolve_food("دجاج", food_index) │
+│ assert result is not None │
+│ assert result["item_ar"] == "دجاج" │
+│ │
+│ □ 3.3 Run tests locally │
+│ → All tests pass ✅ │
+│ → Fix any failures │
+│ │
+│ □ 3.4 Add test coverage report (optional but impressive) │
+│ → Shows what % of code is tested │
+│ → Tool: pytest-cov │
+│ │
+│ OUTCOME: Confidence that code works │
+│ CV SKILL: pytest, Unit Testing, Test-Driven Development │
+│ │
+└─────────────────────────────────────────────────────────────────┘
+↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PHASE 3: MANUAL TESTING (UI & CACHE) [~0.5 hour] │
+├─────────────────────────────────────────────────────────────────┤
+│ │
+│ □ 3.1 Test Context (History) │
+│ → Open UI (streamlit run ui.py) │
+│ → Q1: "ازاي احسب سعراتي؟" (Wait for answer) │
+│ → Q2: "طب اقسمهم ماكروز ازاي؟" (Check if it remembers Q1) │
+│ │
+│ □ 3.2 Test Semantic Cache │
+│ → Q3: "بديل الرز ايه؟" (Wait 5-10s for LLM) │
+│ → Q4: "ايه بدائل الأرز؟" (Should be INSTANT <1s) │
+│ │
+│ □ 3.3 Verify Logs │
+│ → Check logs/trace_*.jsonl │
+│ → Look for "cache_hit" vs "cache_miss" events │
+│ │
+│ OUTCOME: Verified real-world performance & speed │
+│ │
+└─────────────────────────────────────────────────────────────────┘
+↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PHASE 4: CI/CD PIPELINE (GitHub Actions) [~2 hours] │
+├─────────────────────────────────────────────────────────────────┤
+│ │
+│ □ 4.1 Understand GitHub Actions │
+│ → What is a workflow? (Automated script) │
+│ → What are jobs? (Steps in workflow) │
+│ → What triggers it? (push, pull request, schedule) │
+│ → Where does it run? (GitHub's servers, not your PC) │
+│ │
+│ □ 4.2 Create CI workflow │
+│ .github/workflows/ci.yml │
+│ ┌─────────────────────────────────────────┐ │
+│ │ name: CI Pipeline │ │
+│ │ on: │ │
+│ │ push: │ │
+│ │ branches: [main] │ │
+│ │ jobs: │ │
+│ │ test: │ │
+│ │ runs-on: ubuntu-latest │ │
+│ │ steps: │ │
+│ │ 1. Checkout code │ │
+│ │ 2. Setup Python 3.11 │ │
+│ │ 3. Install dependencies │ │
+│ │ 4. Run pytest │ │
+│ │ 5. Report results │ │
+│ └─────────────────────────────────────────┘ │
+│ │
+│ □ 4.3 Test CI pipeline │
+│ → Commit ci.yml file │
+│ → Push to GitHub │
+│ → Go to Actions tab on GitHub │
+│ → Watch tests run automatically │
+│ → See green checkmark ✅ (or fix red X) │
+│ │
+│ □ 4.4 Add badges to README (looks professional!) │
+│ → Build Status badge │
+│ → Test Coverage badge │
+│ │
+│ □ 4.5 Create CD workflow (deploy step) │
+│ → Will connect to AWS (added in Phase 5) │
+│ → For now, just placeholder │
+│ │
+│ OUTCOME: Automatic testing on every push │
+│ CV SKILL: GitHub Actions, CI/CD, YAML, DevOps basics │
+│ │
+└─────────────────────────────────────────────────────────────────┘
+↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PHASE 5: AWS DEPLOYMENT [~3 hours] │
+├─────────────────────────────────────────────────────────────────┤
+│ │
+│ □ 5.1 AWS Fundamentals (concepts, not just clicking) │
+│ → What is EC2? (Virtual server in cloud) │
+│ → What is a VPC? (Private network) │
+│ → What is a Security Group? (Firewall rules) │
+│ → What is an Elastic IP? (Static public IP) │
+│ → What is IAM? (User permissions) │
+│ │
+│ □ 5.2 Fix AWS billing issue │
+│ → Resolve $3.53 payment │
+│ → Set up billing alerts (avoid surprises) │
+│ → Enable Free Tier alerts │
+│ │
+│ □ 5.3 Create EC2 instance │
+│ → Region: Choose closest (e.g., eu-central-1) │
+│ → AMI: Ubuntu 22.04 LTS │
+│ → Instance type: t3.medium (recommended for your stack) │
+│ → Storage: 20 GB (enough for your data) │
+│ → Configure security group: │
+│ - Port 22 (SSH) - Your IP only │
+│ - Port 8000 (FastAPI) - Anywhere (or specific IPs) │
+│ → Create/download key pair (diet-cheat-key.pem) │
+│ │
+│ □ 5.4 Connect to EC2 via SSH (Windows) │
+│ Option A: PowerShell │
+│ ssh -i "diet-cheat-key.pem" ubuntu@ │
+│ │
+│ Option B: PuTTY (if PowerShell fails) │
+│ → Convert .pem to .ppk using PuTTYgen │
+│ → Connect via PuTTY GUI │
+│ │
+│ □ 5.5 Manual deployment first (understand before automating) │
+│ On EC2 instance: │
+│ 1. Update system: sudo apt update && sudo apt upgrade │
+│ 2. Install Python 3.11 │
+│ 3. Install pip, venv │
+│ 4. Clone GitHub repo │
+│ 5. Create virtual environment │
+│ 6. Install dependencies from requirements.txt │
+│ 7. Set up .env file with API keys │
+│ 8. Run ingestion (ingest_chroma.py) │
+│ 9. Start FastAPI: uvicorn src.api:app --host 0.0.0.0 │
+│ 10. Test from browser: http://:8000/health │
+│ │
+│ □ 5.6 Set up process manager (keep app running) │
+│ → Install systemd service (survives reboots) │
+│ → Or use PM2/supervisor │
+│ │
+│ □ 5.7 Connect GitHub Actions to AWS │
+│ → Store AWS credentials in GitHub Secrets: │
+│ - AWS_ACCESS_KEY_ID │
+│ - AWS_SECRET_ACCESS_KEY │
+│ - EC2_HOST │
+│ - EC2_USERNAME │
+│ - SSH_PRIVATE_KEY │
+│ → Update CD workflow (.github/workflows/deploy.yml) │
+│ → Steps: │
+│ 1. SSH into EC2 │
+│ 2. Pull latest code │
+│ 3. Install new dependencies │
+│ 4. Restart service │
+│ │
+│ □ 5.8 Test full pipeline │
+│ → Make small change in code │
+│ → Commit and push to GitHub │
+│ → Watch CI tests run ✅ │
+│ → Watch CD deploy to AWS ✅ │
+│ → Test live app │
+│ │
+│ ⚠️ COST MANAGEMENT: │
+│ → t3.medium: ~$0.0416/hour = ~$30/month if always on │
+│ → TIP: Stop instance when not demoing (costs only storage) │
+│ → Or use t3.micro (free tier) if RAM sufficient │
+│ │
+│ OUTCOME: Live app on AWS, auto-deploys on push │
+│ CV SKILLS: AWS EC2, VPC, Security Groups, SSH, IAM, Linux, │
+│ Infrastructure as Code, CI/CD, DevOps │
+│ │
+└─────────────────────────────────────────────────────────────────┘
+↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PHASE 6: DEMO & DOCUMENTATION [~2 hours] │
+├─────────────────────────────────────────────────────────────────┤
+│ │
+│ □ 6.1 Record demo video │
+│ → Tool: OBS Studio (free) or Loom │
+│ → Script: │
+│ 1. Show architecture diagram (explain flow) │
+│ 2. Live API call (Postman/curl) │
+│ 3. Show chat working (general Q&A) │
+│ 4. Show history (context awareness) │
+│ 5. Show cache (fast repeated response) │
+│ 6. Show food substitution math │
+│ 7. Show CI/CD (push code → auto-deploy) │
+│ → Length: 3-5 minutes (concise!) │
+│ → Upload to YouTube (unlisted link for CV) │
+│ │
+│ □ 6.2 Write professional README.md │
+│ Sections: │
+│ ┌─────────────────────────────────────────┐ │
+│ │ # Diet & Cheat - AI Nutrition Coach │ │
+│ │ │ │
+│ │ ## Overview │ │
+│ │ [Problem statement, solution] │ │
+│ │ │ │
+│ │ ## Architecture │ │
+│ │ [Diagram + explanation] │ │
+│ │ │ │
+│ │ ## Features │ │
+│ │ - Hybrid RAG retrieval │ │
+│ │ - Multi-LLM routing │ │
+│ │ - Food substitution math │ │
+│ │ - Franco-Arabic support │ │
+│ │ │ │
+│ │ ## Tech Stack │ │
+│ │ - Python 3.11 │ │
+│ │ - FastAPI, ChromaDB │ │
+│ │ - HuggingFace, Gemini APIs │ │
+│ │ - GitHub Actions, AWS EC2 │ │
+│ │ │ │
+│ │ ## Setup Instructions │ │
+│ │ [Step-by-step for others to run] │ │
+│ │ │ │
+│ │ ## API Documentation │ │
+│ │ [Endpoints, examples] │ │
+│ │ │ │
+│ │ ## Performance Metrics │ │
+│ │ [Response time, accuracy if tested] │ │
+│ │ │ │
+│ │ ## Future Enhancements │ │
+│ │ - WhatsApp integration │ │
+│ │ - User authentication │ │
+│ │ - Analytics dashboard │ │
+│ └─────────────────────────────────────────┘ │
+│ │
+│ □ 6.3 Create architecture diagram │
+│ → Tool: draw.io (free), Lucidchart, or Excalidraw │
+│ → Show: │
+│ User → FastAPI → Intent Router → [RAG/Math/Chat] │
+│ ↓ │
+│ ChromaDB (Hybrid Retrieval) │
+│ ↓ │
+│ LLM (HF/Gemini) │
+│ ↓ │
+│ Response │
+│ → Export as PNG, add to README │
+│ │
+│ □ 6.4 Add to portfolio/CV │
+│ → LinkedIn: Add project with link │
+│ → GitHub: Pin repository │
+│ → CV: Add under "Projects" section │
+│ Example: │
+│ "Built production-ready AI chatbot with RAG, │
+│ hybrid retrieval, and CI/CD. Deployed on AWS EC2 │
+│ with automated testing via GitHub Actions." │
+│ │
+│ □ 6.5 Make repository public │
+│ → Double-check no secrets in git history │
+│ → Add LICENSE file (MIT recommended) │
+│ → Add CONTRIBUTING.md (optional) │
+│ │
+│ OUTCOME: Portfolio-ready project that impresses employers │
+│ │
+└─────────────────────────────────────────────────────────────────┘
+↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PHASE 7: FRONTEND UI (Streamlit) [~0.5 hour] │
+├─────────────────────────────────────────────────────────────────┤
+│ │
+│ □ 7.1 Create ui.py │
+│ → Simple chat interface using Streamlit │
+│ → Connects to local FastAPI (http://localhost:8000/chat) │
+│ → Maintains session state │
+│ │
+│ □ 7.2 Run and Demo │
+│ → Command: streamlit run ui.py │
+│ → Perfect for recording demo videos │
+│ → Zero cost, 100% Python │
+│ │
+│ OUTCOME: Beautiful chat UI for your portfolio video │
+│ │
+└─────────────────────────────────────────────────────────────────┘
+
+══════════════════════════════════════════════════════════════════
+UPDATED SUMMARY
+══════════════════════════════════════════════════════════════════
+
+TOTAL TIME ESTIMATE: ~12 hours (spread across multiple sessions)
+(Added 2 hours for Phase 0 + Phase 6 enhancements)
+
+COST ESTIMATE:
+→ GitHub: Free
+→ GitHub Actions: Free (2000 minutes/month)
+→ AWS EC2 (t3.medium): ~$30/month (or ~$0 if you stop when not using)
+→ AWS EC2 (t3.micro): Free Tier eligible (750 hours/month)
+→ TOTAL FOR DEMO: Less than $5 (if you stop instance after demo)
+
+CV SKILLS YOU'LL GAIN:
+✅ Python (FastAPI, pytest, async programming)
+✅ AI/ML (RAG, Embeddings, LLM Integration, Prompt Engineering)
+✅ Git & GitHub (version control, collaboration)
+✅ CI/CD (GitHub Actions, automated testing, deployment)
+✅ AWS (EC2, VPC, Security Groups, IAM, SSH)
+✅ Linux basics (Ubuntu, systemd, bash)
+✅ API Development (REST, OpenAPI/Swagger)
+✅ Security (Environment variables, secrets management)
+✅ Project Organization (professional structure)
+✅ Documentation (README, API docs, architecture diagrams)
+✅ DevOps (infrastructure, monitoring, process management)

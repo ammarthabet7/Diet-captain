@@ -1,0 +1,105 @@
+{
+  "predict": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "query": "as5an ezay abl eltamren?",
+        "reasoning": "مش مدعوم للفصل ده.",
+        "domain": "training_guide"
+      },
+      {
+        "augmented": true,
+        "query": "ya3ni eh super set?",
+        "reasoning": "Tamrinen mokhtalefin fi nafs el wa2t, ba3dhom beyro7 el cooldown.",
+        "domain": "training_guide"
+      },
+      {
+        "augmented": true,
+        "query": "eh elpartial reps da?",
+        "reasoning": "مش محدد عشان المثال مش واضح.",
+        "domain": "training_guide"
+      },
+      {
+        "augmented": true,
+        "query": "akol eh mmkn y3ly eltestosterone 3andy?",
+        "reasoning": "Not supplied for this particular example.",
+        "domain": "nutrition_ebook"
+      },
+      {
+        "query": "el keto diet helw le el takhsis?",
+        "domain": "nutrition_ebook"
+      },
+      {
+        "query": "eh el rest time ben el sets?",
+        "domain": "training_guide"
+      },
+      {
+        "query": "ال sugar free drinks بتكسر ال fasting؟",
+        "domain": "nutrition_ebook"
+      },
+      {
+        "query": "el gym bta3y mafoosh dummbells a3mel eh?",
+        "domain": "training_guide"
+      },
+      {
+        "query": "eh afdal wa2t akol fih carbs?",
+        "domain": "nutrition_ebook"
+      },
+      {
+        "query": "eh badayel el frakh 3shan zah2t?",
+        "domain": "nutrition_ebook"
+      },
+      {
+        "query": "el kaffeine bya3mel dehydration?",
+        "domain": "nutrition_ebook"
+      },
+      {
+        "query": "elmafroud atmrn kam yum f elesboo3",
+        "domain": "training_guide"
+      },
+      {
+        "query": "akol ad eh protin f elyum?",
+        "domain": "nutrition_ebook"
+      },
+      {
+        "query": "انا hitting plateau بقالي شهر اغير ال split؟",
+        "domain": "both"
+      },
+      {
+        "query": "law batmaran cardio keteer ahtag azawed el carbs?",
+        "domain": "both"
+      },
+      {
+        "query": "el cardio afdal abl wala ba3d el tamreen?",
+        "domain": "training_guide"
+      }
+    ],
+    "signature": {
+      "instructions": "Classify query domain: nutrition_ebook, training_guide, both.",
+      "fields": [
+        {
+          "prefix": "Query:",
+          "description": "${query}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Domain:",
+          "description": "One of: nutrition_ebook, training_guide, both"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.11",
+      "dspy": "3.0.4",
+      "cloudpickle": "3.1"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+
+        <!DOCTYPE html>
+        <html lang="ar">
+        <head>
+            <meta charset="UTF-8">
+            <title>Pipeline Test Report</title>
+            <style>
+                body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #f4f6f8; margin: 0; padding: 20px; }
+                h2 { color: #2c3e50; text-align: center; }
+                .summary-box { display: flex; justify-content: space-around; background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); margin-bottom: 20px; }
+                .metric { text-align: center; }
+                .metric-val { font-size: 1.5em; font-weight: bold; color: #2980b9; }
+                
+                table { border-collapse: collapse; width: 100%; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+                th, td { padding: 12px 15px; border-bottom: 1px solid #eee; text-align: left; vertical-align: top; }
+                th { background-color: #34495e; color: #fff; font-weight: 600; }
+                
+                .pass { border-left: 5px solid #27ae60; }
+                .fail { border-left: 5px solid #c0392b; background-color: #fff5f5; }
+                
+                .chunk { background: #f8f9fa; padding: 8px; margin: 4px 0; border-left: 3px solid #bdc3c7; font-size: 0.85em; color: #555; }
+                .source-tag { font-size: 0.75em; color: #7f8c8d; font-weight: bold; margin-bottom: 2px; }
+                
+                .answer-box { background: #e8f8f5; padding: 10px; border-radius: 6px; font-size: 0.95em; white-space: pre-wrap; direction: rtl; }
+                .trans-box { font-size: 0.85em; color: #e67e22; font-weight: bold; margin-top: 5px; }
+                
+                .badge { padding: 2px 6px; border-radius: 4px; font-size: 0.8em; font-weight: bold; }
+                .badge-intent { background: #e0f7fa; color: #006064; }
+                .badge-math { background: #f3e5f5; color: #4a148c; }
+            </style>
+        </head>
+        <body>
+        <h2>🚀 Pipeline Integration Test</h2>
+        <div class="summary-box">
+            <div class="metric">Total Queries<div class="metric-val">2</div></div>
+            <div class="metric">Intent Accuracy<div class="metric-val" style="color: #27ae60">100.0%</div></div>
+            <div class="metric">Math Accuracy<div class="metric-val" style="color: #27ae60">100.0%</div></div>
+        </div>
+        <table><thead><tr><th width='20%'>Query & Translation</th><th width='15%'>Intent Logic</th><th width='30%'>RAG Retrieval</th><th width='35%'>Final Answer (WhatsApp)</th></tr></thead><tbody><tr class='pass'><td><div>بديل 100 جرام فراخ بـ لحمة</div><div class='trans-box'>→ بديل 100 جرام فراخ بـ لحم</div></td><td><span class='badge badge-intent'>MATH_SUBSTITUTION</span><br><br>✅ Exp: MATH_SUBSTITUTION<br><br><span class='badge badge-math'>✅ Pass (100.0g)</span></td><td><span style='color:#ccc'>No Context</span></td><td><div class='answer-box'>✅ تمام يا بطل.
+لو عايز تبدل *100* جم لحم صدور، تاخد مكانهم *100* جم لحم احمر.</div></td></tr><tr class='pass'><td><div>بديل 60 جرام رز بـ مكرونة</div><div class='trans-box'>→ بديل 60 جرام رز بـ مكرونة</div></td><td><span class='badge badge-intent'>MATH_SUBSTITUTION</span><br><br>✅ Exp: MATH_SUBSTITUTION<br><br><span class='badge badge-math'>✅ Pass (60.0g)</span></td><td><span style='color:#ccc'>No Context</span></td><td><div class='answer-box'>✅ تمام يا بطل.
+لو عايز تبدل *60* جم رز، تاخد مكانهم *65* جم مكرونه.</div></td></tr></tbody></table></body></html>
